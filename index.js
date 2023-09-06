@@ -1,7 +1,8 @@
 const express=require('express');
-const port=800;
+const port=8000;
 const app=express();
-
+const userRouters=require('./router/users')
+app.use('/',userRouters);
 
 app.listen(port,function(err){
     if(err){
